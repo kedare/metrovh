@@ -34,9 +34,8 @@
             </Grid.RowDefinitions>
             
             <StackPanel>
-                <TextBlock>MetrOVH version 1</TextBlock>
                 <TextBlock>Developped by Mathieu Poussin</TextBlock>
-                <TextBlock>This program is NOT supported by OVH</TextBlock>
+                <TextBlock>This application is NOT supported by OVH.</TextBlock>
             </StackPanel>
         </Grid>
     </Grid>
