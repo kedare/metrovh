@@ -54,6 +54,7 @@ namespace MetrOVH
             // advanced functionality that HttpWebRequest provides, such as the ability to send headers.
             WebClient webClient = new WebClient();
 
+
             TitleBlock.Text = (Application.Current as App).CurrentFeedName;
 
             // Subscribe to the DownloadStringCompleted event prior to downloading the RSS feed.

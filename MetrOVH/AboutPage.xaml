@@ -27,10 +27,17 @@
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
-        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <ListBox>
-            </ListBox>
-
+        <Grid x:Name="ContentPanel" Grid.Row="3" Margin="12,0,12,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            
+            <StackPanel>
+                <TextBlock>MetrOVH version 1</TextBlock>
+                <TextBlock>Developped by Mathieu Poussin</TextBlock>
+                <TextBlock>This program is NOT supported by OVH</TextBlock>
+            </StackPanel>
         </Grid>
     </Grid>
 
