@@ -41,12 +41,17 @@ namespace MetrOVH
             if (IncidentLongListSelector.SelectedItem == null)
                 return;
 
-            string sectionName = (IncidentLongListSelector.SelectedItem as ItemViewModel).LineOne;
 
+            string categoryName = (IncidentLongListSelector.SelectedItem as IncidentViewModel).LineOne;
+            string rssFeed = (IncidentLongListSelector.SelectedItem as IncidentViewModel).RssFeed;
+
+
+            (Application.Current as App).CurrentFeedName = categoryName;
+            (Application.Current as App).CurrentFeedUrl = rssFeed;
 
 
             // Navigate to the new page
-            NavigationService.Navigate(new Uri("/Incident" + sectionName + "Page.xaml", UriKind.Relative));
+            NavigationService.Navigate(new Uri("/IncidentCategoryPage.xaml", UriKind.Relative));
 
             // Reset selected item to null (no selection)
             IncidentLongListSelector.SelectedItem = null;

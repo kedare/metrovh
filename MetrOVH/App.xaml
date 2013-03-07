@@ -8,6 +8,7 @@
     <!--Application Resources-->
     <Application.Resources>
         <local:LocalizedStrings xmlns:local="clr-namespace:MetrOVH" x:Key="LocalizedStrings"/>
+        <converter:RssTextTrimmer xmlns:converter="clr-namespace:MetrOVH" x:Key="RssTextTrimmer" />
     </Application.Resources>
 
     <Application.ApplicationLifetimeObjects>

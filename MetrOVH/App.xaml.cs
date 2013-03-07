@@ -15,6 +15,9 @@ namespace MetrOVH
     {
         private static MainViewModel viewModel = null;
 
+        public string CurrentFeedUrl { get; set; }
+        public string CurrentFeedName { get; set; }
+
         /// <summary>
         /// A static ViewModel used by the views to bind against.
         /// </summary>
