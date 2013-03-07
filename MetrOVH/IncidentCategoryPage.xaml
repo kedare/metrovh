@@ -40,14 +40,14 @@
          -->
 
         <!--TitlePanel contains the name of the application and page title-->
-        <StackPanel Grid.Row="0" Margin="12,17,0,28">
+        <StackPanel Grid.Row="0">
             <TextBlock Text="MetrOVH" Style="{StaticResource PhoneTextNormalStyle}"/>
-            <TextBlock Name="TitleBlock" Text="" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+            <TextBlock Name="TitleBlock" Text="" Style="{StaticResource PhoneTextTitle1Style}"/>
         </StackPanel>
 
         <!--ContentPanel contains LongListSelector and LongListSelector ItemTemplate. Place additional content here-->
-        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <ListBox Name="feedListBox" Height="468" HorizontalAlignment="Left" Margin="20,100,0,0" VerticalAlignment="Top" Width="444" ScrollViewer.VerticalScrollBarVisibility="Auto" SelectionChanged="feedListBox_SelectionChanged">
+        <Grid x:Name="ContentPanel" Grid.Row="1">
+            <ListBox Name="feedListBox" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="444" ScrollViewer.VerticalScrollBarVisibility="Auto" SelectionChanged="feedListBox_SelectionChanged">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <StackPanel VerticalAlignment="Top">
