@@ -12,6 +12,7 @@ using MetrOVH.ViewModels;
 using System.IO;
 using System.Xml;
 using System.ServiceModel.Syndication;
+using Microsoft.Phone.Tasks;
 
 namespace MetrOVH
 {
@@ -52,6 +53,8 @@ namespace MetrOVH
             // the implementation is simpler and easier to use, and we do not need to use 
             // advanced functionality that HttpWebRequest provides, such as the ability to send headers.
             WebClient webClient = new WebClient();
+
+            TitleBlock.Text = (Application.Current as App).CurrentFeedName;
 
             // Subscribe to the DownloadStringCompleted event prior to downloading the RSS feed.
             webClient.DownloadStringCompleted += new DownloadStringCompletedEventHandler(webClient_DownloadStringCompleted);
@@ -100,6 +103,30 @@ namespace MetrOVH
 
             });
 
+        }
+
+        private void feedListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            ListBox listBox = sender as ListBox;
+
+            if (listBox != null && listBox.SelectedItem != null)
+            {
+                // Get the SyndicationItem that was tapped.
+                SyndicationItem sItem = (SyndicationItem)listBox.SelectedItem;
+
+                // Set up the page navigation only if a link actually exists in the feed item.
+                if (sItem.Links.Count > 0)
+                {
+                    // Get the associated URI of the feed item.
+                    Uri uri = sItem.Links.FirstOrDefault().Uri;
+
+                    // Create a new WebBrowserTask Launcher to navigate to the feed item. 
+                    // An alternative solution would be to use a WebBrowser control, but WebBrowserTask is simpler to use. 
+                    WebBrowserTask webBrowserTask = new WebBrowserTask();
+                    webBrowserTask.Uri = uri;
+                    webBrowserTask.Show();
+                }
+            }
         }
 
 

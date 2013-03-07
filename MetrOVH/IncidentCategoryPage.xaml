@@ -47,7 +47,7 @@
 
         <!--ContentPanel contains LongListSelector and LongListSelector ItemTemplate. Place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <ListBox Name="feedListBox" Height="468" HorizontalAlignment="Left" Margin="20,100,0,0" VerticalAlignment="Top" Width="444" ScrollViewer.VerticalScrollBarVisibility="Auto">
+            <ListBox Name="feedListBox" Height="468" HorizontalAlignment="Left" Margin="20,100,0,0" VerticalAlignment="Top" Width="444" ScrollViewer.VerticalScrollBarVisibility="Auto" SelectionChanged="feedListBox_SelectionChanged">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <StackPanel VerticalAlignment="Top">
