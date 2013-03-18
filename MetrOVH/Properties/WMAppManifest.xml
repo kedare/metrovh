@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Deployment xmlns="http://schemas.microsoft.com/windowsphone/2012/deployment" AppPlatformVersion="8.0">
   <DefaultLanguage xmlns="" code="en-US" />
-  <App xmlns="" ProductID="{6f8195bc-f731-4e02-ab02-9ad062e59a9a}" Title="MetrOVH" RuntimeType="Silverlight" Version="13.03.07.1" Genre="apps.normal" Author="Mathieu Poussin" Description="Sample description" Publisher="Mathieu Poussin" PublisherID="{243a1bf1-0f28-42f5-9b92-723c22214328}">
+  <App xmlns="" ProductID="{6f8195bc-f731-4e02-ab02-9ad062e59a9a}" Title="MetrOVH" RuntimeType="Silverlight" Version="13.03.18.1" Genre="apps.normal" Author="Mathieu Poussin" Description="Sample description" Publisher="Mathieu Poussin" PublisherID="{243a1bf1-0f28-42f5-9b92-723c22214328}">
     <IconPath IsRelative="true" IsResource="false">Assets\ApplicationIcon.png</IconPath>
     <Capabilities>
       <Capability Name="ID_CAP_NETWORKING" />
